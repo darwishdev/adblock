@@ -28,21 +28,26 @@ const features = [
 ]
 
 init = () => {
-    const params = new URLSearchParams(window.location.search)
-    const feature=features[parseInt(params.get('feature')) -1]
-    const titles = document.querySelectorAll('.feature-title')
-    const desc = document.querySelector('.feature-desc')
-    const img = document.querySelector('.feature-img')
-    img.setAttribute("style" ,  `background-image : url(${feature.img}) !important`)
-    // img.style.backgroundImage = `url(${feature.img}) !important`;
-    titles.forEach((title)=>{
-        title.innerHTML = feature.name
-    })
-    desc.innerHTML = feature.desc
+    setTimeout(() => {
+        const params = new URLSearchParams(window.location.search)
+        const feature=features[parseInt(params.get('feature')) -1]
+        const titles = document.querySelectorAll('.feature-title')
+        
+        const desc = document.querySelector('.feature-desc')
+        const img = document.querySelector('.feature-img')
+        img.setAttribute("style" ,  `background-image : url(${feature.img}) !important`)
+        // img.style.backgroundImage = `url(${feature.img}) !important`;
+        titles.forEach((title)=>{
+            title.innerHTML = feature.name
+        })
+        desc.innerHTML = feature.desc
+        
+    }, 1300);
     console.log("titles")
 }
 if (document.readyState !== "loading") {
     init()
 } else {
-    document.addEventListener("DOMContentLoaded", init);
+    // document.addEventListener("DOMNodeInserted", init);
+    $(document).ready(init)
 }
