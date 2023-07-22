@@ -38,10 +38,38 @@
       - captions
     12.Version Light
 
+
+
 -------------------------------------------------------------*/
 /* -------------------------------------------------------
                      mixins
 -------------------------------------------------------- */
+
+:root {
+  --color-primary: rgb(139, 98, 59);
+  --color-primary-glass: rgba(139, 98, 59, 0.2);
+}
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.about-svg {
+  background-color: var(--color-primary-glass);
+}
+.sa-img {
+  max-width: 100px;
+  margin-inline: 50px;
+  margin-bottom: 50px;
+}
+.about-svg path {
+  fill: var(--color-primary);
+}
+
+.slider-logo {
+  width: 200px;
+}
 .post-full-content.single-post > *:not(.gallery),
 .post-full-content.single-post > *:not(.wp-block-quote) > p,
 .widget_text.single-post > *:not(.gallery),
@@ -3333,7 +3361,7 @@ body.hamburger-menu .header-top {
 }
 
 .header-top .header-container .logo img {
-  width: 120px;
+  width: 200px;
 }
 
 .header-top .header-container .menu-icon {
@@ -7156,7 +7184,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   left: auto;
   right: 0;
   bottom: 0;
-  width: calc(50% + 50px);
+  width: 50%;
 }
 
 .intro-about .background-mask .background-mask-bg {
@@ -7178,7 +7206,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
 }
 
 .intro-about .intro-content-text h2 {
-  text-align: right;
+  text-align: left;
   margin-bottom: 40px;
   font-size: 42px;
   font-weight: 800;
@@ -15475,7 +15503,7 @@ footer .copyright-social ul li:last-child {
 }
 
 .footer .footer-links .footer-block .footer-logo {
-  width: 90px;
+  width: 200px;
 }
 
 .footer .footer-links .footer-block .footer-social {
