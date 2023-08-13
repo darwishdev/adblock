@@ -15711,3 +15711,9 @@ footer .copyright-social ul li:last-child {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+@media (max-width: 600px) {
+  .pr-btn {
+    margin-top: 10px;
+  }
+}
